@@ -12,7 +12,7 @@
   // Sticky Header
   function StickyHeader() {
     
-    window.addEventListener('scroll', (e) => {
+    window.addEventListener('scroll', (e) => { 
       const header = document.querySelector('.header-area')
       const img = header.querySelector('.logo-area img')
       if (window.scrollY > 30) {
@@ -28,7 +28,18 @@
       }
     })
   }
-  StickyHeader()
+  window.addEventListener('load', (e) => {
+    // if (768 < window.innerWidth) {
+    // }
+
+    StickyHeader()
+
+    StickyMenu()
+
+    // Load the modal
+    $("#exampleModal").modal('show');
+  })
+
   
   AOS.init({
     // Global settings:
@@ -103,14 +114,7 @@
 
   
 
-  window.addEventListener('load', (e) => {
-    StickyMenu()
 
-    // Load the modal
-    $("#exampleModal").modal('show');
-  })
-
- 
  
  
   
